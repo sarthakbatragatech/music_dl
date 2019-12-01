@@ -1,6 +1,6 @@
 from pydub import AudioSegment
 
-file = 'not_smart'
+file = 'bohemian'
 sound_path = 'data/sample/' + file + '.wav'
 
 sound = AudioSegment.from_wav(sound_path)
