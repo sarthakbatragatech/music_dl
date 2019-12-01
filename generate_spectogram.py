@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy import signal
 from scipy.io import wavfile
 
-sound_path = 'data/sample/not_smart.wav'
+sound_path = 'data/sample/not_smart_mono.wav'
 sample_rate, samples = wavfile.read(sound_path)
 frequencies, times, spectrogram = signal.spectrogram(samples, sample_rate)
 

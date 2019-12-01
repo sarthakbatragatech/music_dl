@@ -3,7 +3,7 @@ from pydub import AudioSegment
 from pydub.playback import play
 from tinytag import TinyTag
 
-file = 'not_smart'
+file = 'not_smart_mono'
 sound_path = 'data/sample/' + file + '.wav'
 
 # Grab Metadata
