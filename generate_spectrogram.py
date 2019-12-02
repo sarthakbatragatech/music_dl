@@ -3,11 +3,14 @@ import matplotlib.pyplot as plt
 from scipy import signal
 from scipy.io import wavfile
 import numpy as np
+from utils import *
 
-sound_path = 'data/sample/tiny_tim.wav'
+sound_path = 'data/sample/not_smart.wav'
+# Pre Process Audio
+sound_path  = preprocess(sound_path)
+
+# Read new processed audio file
 sample_rate, samples = wavfile.read(sound_path)
-# print(np.shape(samples))
-# if shape has 2 cols, convert_to_mono
 frequencies, times, spectrogram = signal.spectrogram(samples, sample_rate)
 
 plt.pcolormesh(times, frequencies, spectrogram)
