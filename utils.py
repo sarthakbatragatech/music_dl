@@ -4,10 +4,10 @@ from scipy.io import wavfile
 import numpy as np
 
 # Convert mp3 file to wav
-def convert_to_wav(src_path):
+def convert_to_wav(src_path): 
     print('Converting mp3 to wav...')
     print('')
-    dest_path = sound_path[:-4] + '.wav'                                                   
+    dest_path = src_path[:-4] + '.wav'                                                   
     sound = AudioSegment.from_mp3(src_path)
     sound.export(dest_path, format="wav")
     return dest_path
@@ -26,7 +26,6 @@ def convert_to_mono(src_path):
         return dest_path
     except IndexError:
         return src_path
-
 
 # Preprocess Audio
 def preprocess(sound_path):
